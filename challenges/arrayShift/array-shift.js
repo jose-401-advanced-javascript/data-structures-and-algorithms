@@ -9,3 +9,7 @@ const reverseArray = array => {
         array[i] = last;
     }
 }
+
+module.exports = {
+    reverseArray
+};
