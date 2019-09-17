@@ -1,1 +1,5 @@
-# data-structures-and-algorithms
+# Table of Contents
+
+## Challenges
+
+### Challenge 01 - Array Shift
