@@ -7,4 +7,4 @@ const addFirst = (arr, num) => {
    return arr;
 }
 
-console.log(addFirst([2, 3, 4], 1));
+module.exports = {addFirst};
