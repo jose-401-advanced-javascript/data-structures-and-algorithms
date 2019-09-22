@@ -1,12 +1,11 @@
-# Reverse an Array
-Create a function that will take an array an reverse the numbers in it.
+# Shift an Array
+I need to add a number to the beginning of the array without using any built in methods.
 
 ## Challenge
-Take an array of any length and reverse the elements inside it without using any built in methods.
+Since I can't use any of the built-in methods I will have to figure out away of to move all of the values in each of the indexes of the array back one to make room for the new number to be added to index 0.
 
 ## Approach & Efficiency
-Using simple for loop should be keep the time growing linearly while keeping the size of the array the same.
+I think the easiest way to approach it would be to work backwards through the array and assign the index in the previous index to the new one I'm creating in the end so that index 0 will be available to assign.
 
 ## Solution
-
-![Diagram](assets\whiteboard.jpg)
+![whiteboard](assets/whiteboard.jpg)
