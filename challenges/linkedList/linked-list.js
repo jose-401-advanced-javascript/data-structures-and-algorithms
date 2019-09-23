@@ -36,7 +36,15 @@ class LinkedList {
     }
   }
 
-  
+  toString() {
+    let curr = this.head; 
+    let str = ''; 
+    while(curr) { 
+      str += curr.value + ' '; 
+      curr = curr.next; 
+    } 
+    console.log(str);
+  }
 }
 
 module.exports = { LinkedList };
