@@ -22,6 +22,21 @@ class LinkedList {
     } 
     this.size++; 
   }
+
+  includes(value) {
+    const current = this.head;
+
+    while(current !== null){
+      if(current.value === value) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+  }
+
+  
 }
 
 module.exports = { LinkedList };
