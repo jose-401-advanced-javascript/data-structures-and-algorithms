@@ -1,9 +1,8 @@
-const { Node } = require('Node');
+const { Node } = require('./node-class');
 
 class LinkedList {
   constructor() {
     this.head = null;
-    this.size = 0;
   }
 
   insert(value) {
@@ -20,7 +19,6 @@ class LinkedList {
  
       current.next = node; 
     } 
-    this.size++; 
   }
 
   includes(value) {
