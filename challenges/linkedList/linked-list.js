@@ -29,13 +29,17 @@ class LinkedList {
   }
 
   includes(value) {
-    const current = this.head;
-
+    let current = this.head;
+    console.log(current);
     while(current !== null){
+      
       if(current.value === value) {
         return true;
       }
-      else {
+      if(current.value !== value) {
+        current = current.next;      
+      }
+      if(current.value !== value && current.next === null) {
         return false;
       }
     }
@@ -49,6 +53,30 @@ class LinkedList {
       current = current.next; 
     } 
     return str;
+  }
+
+  insertBefore(value, newVal) {
+    if(!this.includes(value)) {
+      return 'this value is not in the list';
+    }
+    else {
+      const node = new Node(newVal);
+      let current = this.head;
+      // console.log(current);
+      while(current !== null){
+        if(current.value === value) {
+          node.next = current;
+          current = node;
+          return;
+        }
+        if(current.value !== value) {
+          current = current.next;
+        }
+        if(current.value !== value && current.next === null) {
+          return;
+        }
+      }
+    }
   }
 }
 
