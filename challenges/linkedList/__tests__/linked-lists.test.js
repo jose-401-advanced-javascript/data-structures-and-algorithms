@@ -44,5 +44,18 @@ describe('Linked list', () => {
       expect(list.toString()).toBe('test test-2 ');
     });
   });
+
+  describe('append', () => {
+    
+    const list = new LinkedList();
+    list.insert('test');
+    list.insert('test-2');
+    list.append('test-3');
+
+    it('It replaces the head of the node', () => {
+      expect(list.head).toBeInstanceOf(Node);
+      expect(list.head.value).toBe('test-3');
+    });
+  });
 });
 

@@ -5,11 +5,18 @@ class LinkedList {
     this.head = null;
   }
 
+  append(value) {
+    const node = new Node(value);
+    node.next = this.head;
+    this.head = node;
+  }
+
   insert(value) {
     const node = new Node(value);
     let current;
-    if(this.head === null) 
+    if(this.head === null) {
       this.head = node; 
+    }
     else { 
       current = this.head; 
 
