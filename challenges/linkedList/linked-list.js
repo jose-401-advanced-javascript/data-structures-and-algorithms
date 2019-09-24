@@ -35,13 +35,13 @@ class LinkedList {
   }
 
   toString() {
-    let curr = this.head; 
+    let current = this.head; 
     let str = ''; 
-    while(curr) { 
-      str += curr.value + ' '; 
-      curr = curr.next; 
+    while(current) { 
+      str += current.value + ' '; 
+      current = current.next; 
     } 
-    console.log(str);
+    return str;
   }
 }
 
