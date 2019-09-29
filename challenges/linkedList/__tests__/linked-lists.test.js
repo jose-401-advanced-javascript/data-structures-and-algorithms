@@ -50,9 +50,7 @@ describe('Linked list', () => {
 
     it('inserts a node before a node located in the middle of a linked list', () => {
       list.insertBefore('test-3', 'test-2.5');
-
-      
-      // expect(list.head.next.value).toBe('test-2.5');  
+      expect(list.head.next.value).toBe('test-2.5');  
     });
       
   });

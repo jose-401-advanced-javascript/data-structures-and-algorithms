@@ -30,7 +30,6 @@ class LinkedList {
 
   includes(value) {
     let current = this.head;
-    console.log(current);
     while(current !== null){
       
       if(current.value === value) {
@@ -56,27 +55,22 @@ class LinkedList {
   }
 
   insertBefore(value, newVal) {
-    if(!this.includes(value)) {
-      return 'this value is not in the list';
-    }
-    else {
-      const node = new Node(newVal);
-      let current = this.head;
-      // console.log(current);
-      while(current !== null){
-        if(current.value === value) {
-          node.next = current;
-          current = node;
-          return;
-        }
-        if(current.value !== value) {
-          current = current.next;
-        }
-        if(current.value !== value && current.next === null) {
-          return;
-        }
-      }
-    }
+   const node = new Node(newVal);
+   if(this.head === null) {
+     this.head = node;
+     return this.head;
+   }
+   if(this.head.value === value) {
+     node.next = this.head;
+     this.head = node;
+   }
+   let currentNode = this.head;
+   while(currentNode.next.value !== value) {
+     currentNode.next = currentNode;
+   }
+   node.next = currentNode.next;
+   currentNode.next = newNode;
+   return node;
   }
 }
 
