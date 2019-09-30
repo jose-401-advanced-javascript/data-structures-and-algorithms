@@ -101,6 +101,15 @@ class LinkedList {
     if(k < 0) {
       return 'Input needs to be a positive integer';
     }
+    let node = this.head;
+    let nodesDeep = this.size - 1 - k;
+    
+    for(nodesDeep; nodesDeep >= 0; nodesDeep--) {
+      if(nodesDeep === 0) {    
+        return node.value;
+      }
+      node = node.next;
+    }
   }
 }
 

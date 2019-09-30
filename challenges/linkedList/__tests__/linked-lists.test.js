@@ -91,7 +91,19 @@ describe('Linked list', () => {
       expect(result).toBe('Input needs to be a positive integer');
     });
 
-    
+    it('returns the 0th value from the end', () => {
+      const result = list.countFromTheEnd(0);
+      expect(result).toBe('test-4');
+    });
+
+    it('returns the correct "th" value form the end', () => {
+      const result1 = list.countFromTheEnd(1);
+      const result2 = list.countFromTheEnd(2);
+      const result3 = list.countFromTheEnd(3);
+      expect(result1).toBe('test-3');
+      expect(result2).toBe('test-2');
+      expect(result3).toBe('test');
+    });
 
   });
 });
