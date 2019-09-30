@@ -3,19 +3,22 @@ const { Node } = require('./node-class');
 class LinkedList {
   constructor() {
     this.head = null;
+    this.size = 0;
   }
 
   append(value) {
     const node = new Node(value);
     node.next = this.head;
     this.head = node;
+    this.size++; 
   }
 
   insert(value) {
     const node = new Node(value);
     let current;
     if(this.head === null) {
-      this.head = node; 
+      this.head = node;
+      this.size++; 
     }
     else { 
       current = this.head; 
@@ -24,7 +27,8 @@ class LinkedList {
         current = current.next; 
       } 
  
-      current.next = node; 
+      current.next = node;
+      this.size++; 
     } 
   }
 
@@ -68,6 +72,7 @@ class LinkedList {
         node.next = current.next;
         current.next = node;
         current = node;
+        this.size++; 
       } 
       current = current.next;
     } 
@@ -83,8 +88,27 @@ class LinkedList {
       if(current.value === value) {
         node.next = current.next;
         current.next = node;
+        this.size++; 
       }
       current = current.next;
+    }
+  }
+  
+  countFromTheEnd(k) {
+    if(this.size <= k) {
+      return 'There are not enough nodes in the list';
+    }
+    if(k < 0) {
+      return 'Input needs to be a positive integer';
+    }
+    let node = this.head;
+    let nodesDeep = this.size - 1 - k;
+    
+    for(nodesDeep; nodesDeep >= 0; nodesDeep--) {
+      if(nodesDeep === 0) {    
+        return node.value;
+      }
+      node = node.next;
     }
   }
 }

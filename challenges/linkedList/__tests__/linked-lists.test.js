@@ -7,7 +7,7 @@ describe('Linked list', () => {
 
   it('crates an empty linked list', () =>{
     const list1 = new LinkedList();
-    expect(list1).toEqual({ head: null });
+    expect(list1).toEqual({ head: null, size: 0 });
   });
 
   describe('insert', () => {
@@ -54,7 +54,6 @@ describe('Linked list', () => {
     });
 
     it('inserts after a node in the middle of the linked list', () => {
-      console.log(list);
       list.insertAfter('test-2', 'test-2.5');
       expect(list.head.next.next.value).toBe('test-2.5');
     });
@@ -71,6 +70,41 @@ describe('Linked list', () => {
       expect(list.head).toBeInstanceOf(Node);
       expect(list.head.value).toBe('test-3');
     });
+  });
+
+  describe('count from the end', () => {
+
+    const list = new LinkedList();
+
+    list.insert('test');
+    list.insert('test-2');
+    list.insert('test-3');
+    list.insert('test-4');
+ 
+    it('outputs a message if the value is longer than the size of the list', () => {
+      const result = list.countFromTheEnd(5);
+      expect(result).toBe('There are not enough nodes in the list');
+    });
+
+    it('outputs a message if the value is 0', () => {
+      const result = list.countFromTheEnd(-1);
+      expect(result).toBe('Input needs to be a positive integer');
+    });
+
+    it('returns the 0th value from the end', () => {
+      const result = list.countFromTheEnd(0);
+      expect(result).toBe('test-4');
+    });
+
+    it('returns the correct "th" value form the end', () => {
+      const result1 = list.countFromTheEnd(1);
+      const result2 = list.countFromTheEnd(2);
+      const result3 = list.countFromTheEnd(3);
+      expect(result1).toBe('test-3');
+      expect(result2).toBe('test-2');
+      expect(result3).toBe('test');
+    });
+
   });
 });
 

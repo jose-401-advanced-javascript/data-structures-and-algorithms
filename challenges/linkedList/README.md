@@ -1,11 +1,11 @@
 # Singly Linked List
-Write three new methods that add values to the end, and middle of the list based on the value of the node
+Write a new method that takes a value, counts backwards form the end a number of times equal to the value and outputs the value of the node.
 
 ## Challenge
-You have to figure out a way to find the value that's right and then write code that will add a new node to the information that's already there without deleting any of the preexisting nodes. 
+You have to not only keep track of the total number of nodes but make sure that you're counting form the last node in the list.
 
 ## Approach & Efficiency
-I realized as I was reading the instructions of the append method that I had already solved that during the last code challenge and had not written a true inset method (i.e. my 'insert' method appends a new node to the end of the list and vice versa). So instated I wrote a true insert method and called it append. I also wanted to make things a simple as possible so I used my existing append method when possible.
+I'll have to add a way to keep track of the size of the total list which means not only creating a new method but also changing existing ones. I'll also keep track of the right now by counting the total number of nodes, subtracting the inputted value and then iterating through the nodes.
 
 ## Solution
-![whiteboard](assets/whiteboard-6.jpg)
+![whiteboard](assets/whiteboard-7.jpg)
