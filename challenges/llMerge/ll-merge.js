@@ -8,12 +8,12 @@ const mergeLists = (list1, list2) => {
 
   let timer = isLonger(list1, list2);
   while(timer > 0) {
-    if(current1.value){
+    if(current1){
       newList.insert(current1.value);
       current1 = current1.next;
     }
     
-    if(current2.value){
+    if(current2){
       newList.insert(current2.value);
       current2 = current2.next;
     }
