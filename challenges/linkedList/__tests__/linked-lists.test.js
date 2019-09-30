@@ -45,13 +45,19 @@ describe('Linked list', () => {
     });
 
     it('can properly return a collection of all the values that exist in the linked list', () => {
-      expect(list.toString()).toBe('test test-2 test-3 ');
+      expect(list.toString()).toBe('test test-2 test-3 '); 
     });
 
-    it('inserts a node before a node located in the middle of a linked list', () => {
-      list.insertBefore('test-3', 'test-2.5');
-      expect(list.head.next.value).toBe('test-2.5');  
+    it('inserts a node before a node located in the middle of a linked list', () => {      
+      list.insertBefore('test-3', 'test-2.5');      
+      expect(list.head.next.next.value).toBe('test-2.5');  
     });
+
+    // it('inserts after a node in the middle of the linked list', () => {
+    //   console.log(list);
+    //   // list.inserAfter('test-2', 'test-2.5');
+    //   // expect(list.head.next.value).toBe('test-2.5');
+    // });
       
   });
 
