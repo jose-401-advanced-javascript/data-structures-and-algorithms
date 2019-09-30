@@ -1,8 +1,8 @@
 # Singly Linked List
-Implement a Singly Linked List Data Structure with a Node and LinkedList Class
+Write three new methods that add values to the end, and middle of the list based on the value of the node
 
 ## Challenge
-Write a LinkedList class that includes nodes that point to each other. We also have to include a method to insert new nodes, check to see if it includes a built node and can create a sting with all the node names.
+You have to figure out a way to find the value that's right and then write code that will add a new node to the information that's already there without deleting any of the preexisting nodes. 
 
 ## Approach & Efficiency
-I will use classes for both Node and Linked list so that navigating through them can be kept time performance at O(1). Since we don't need to keep track of the size of the linked list I will only include a head as part of the constructor function.
+I realized as I was reading the instructions of the append method that I had already solved that during the last code challenge and had not written a true inset method (i.e. my 'insert' method appends a new node to the end of the list and vice versa). So instated I wrote a true insert method and called it append. I also wanted to make things a simple as possible so I used my existing append method when possible.

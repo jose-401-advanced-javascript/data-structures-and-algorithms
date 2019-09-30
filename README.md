@@ -8,4 +8,4 @@
 
 [Challenge 03](./challenges/arrayBinarySearch/README.md)
 
-[Challenge 05](./challenges/linkedList/README.md)
+[Challenge 05 - 06](./challenges/linkedList/README.md)
