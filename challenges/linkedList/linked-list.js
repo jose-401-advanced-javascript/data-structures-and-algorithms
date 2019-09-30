@@ -60,7 +60,7 @@ class LinkedList {
 
     let current = this.head;
     if(current.value === value) {
-      this.apped(newVal);
+      this.append(newVal);
     }
 
     while(current.next) {
@@ -73,19 +73,20 @@ class LinkedList {
     } 
   }
 
-  // insertAfter(value, newVal) {
-  //   const node = new Node(newVal);
-  //   let currentNode = this.head;
-  //   if(this.head === null) {
-  //     this.head = node;
-  //     return this.head;
-  //   }
-  //   while(currentNode.value !== value) {
-  //     currentNode = currentNode.next;
-  //   }
-  //   node.next = currentNode;
-  //   currentNode.next = node;
-  // }
+  insertAfter(value, newVal) {
+    const node = new Node(newVal);
+    let current = this.head;
+    if(current.head === value) {
+      this.insert(newVal);
+    }
+    while(current.next) {
+      if(current.value === value) {
+        node.next = current.next;
+        current.next = node;
+      }
+      current = current.next;
+    }
+  }
 }
 
 module.exports = { LinkedList };

@@ -53,11 +53,11 @@ describe('Linked list', () => {
       expect(list.head.next.next.value).toBe('test-2.5');  
     });
 
-    // it('inserts after a node in the middle of the linked list', () => {
-    //   console.log(list);
-    //   // list.inserAfter('test-2', 'test-2.5');
-    //   // expect(list.head.next.value).toBe('test-2.5');
-    // });
+    it('inserts after a node in the middle of the linked list', () => {
+      console.log(list);
+      list.insertAfter('test-2', 'test-2.5');
+      expect(list.head.next.next.value).toBe('test-2.5');
+    });
       
   });
 
