@@ -93,6 +93,15 @@ class LinkedList {
       current = current.next;
     }
   }
+  
+  countFromTheEnd(k) {
+    if(this.size <= k) {
+      return 'There are not enough nodes in the list';
+    }
+    if(k < 0) {
+      return 'Input needs to be a positive integer';
+    }
+  }
 }
 
 module.exports = { LinkedList };
