@@ -6,3 +6,6 @@ You have to figure out a way to find the value that's right and then write code 
 
 ## Approach & Efficiency
 I realized as I was reading the instructions of the append method that I had already solved that during the last code challenge and had not written a true inset method (i.e. my 'insert' method appends a new node to the end of the list and vice versa). So instated I wrote a true insert method and called it append. I also wanted to make things a simple as possible so I used my existing append method when possible.
+
+## Solution
+![whiteboard](assets/whiteboard-6.jpg)
