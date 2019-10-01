@@ -20,4 +20,11 @@ describe('Stacks', () => {
     expect(stack.top.next.value).toBe('test-2');
     expect(stack.top.next.next.value).toBe('test');
   });
+
+  it('can pop a value', () => {
+    stack.push('test');
+    stack.push('test-2');
+    stack.pop();
+    expect(stack.top.value).toBe('test');
+  });
 });
