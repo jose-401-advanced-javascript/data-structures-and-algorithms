@@ -35,8 +35,25 @@ class Stack {
 
 class Queue {
   constructor() {
-    this.queue = null;
+    this.front = null;
   }
+
+  enqueue(value) {
+    let head = this.front;
+    let node = new Node(value);
+
+    if(!head) {
+      this.front = node;
+    }
+    else {
+      let traverseNode = head;
+      while(traverseNode.next) {
+        traverseNode = traverseNode.next;
+      }
+      traverseNode.next = node;
+    }
+  }
+
 }
 
 module.exports = { Stack, Queue };
