@@ -26,6 +26,11 @@ class Stack {
     this.top = head.next;
     return head.value;
   }
+
+  peek() {
+    if(!this.top) return 'Stack is empty';
+    return this.top.value;
+  }
 }
 
 module.exports = { Stack };
