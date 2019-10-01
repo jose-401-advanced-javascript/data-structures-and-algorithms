@@ -14,7 +14,7 @@ class Stack {
     }
     else {
       node.next = head;
-      this.stack = node;
+      this.top = node;
     }
   }
 
