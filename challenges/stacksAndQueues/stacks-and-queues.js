@@ -6,7 +6,7 @@ class Stack {
   }
 
   push(value) {
-    let head = this.stack;
+    let head = this.top;
     let node = new Node(value);
 
     if(!head) {
@@ -33,4 +33,10 @@ class Stack {
   }
 }
 
-module.exports = { Stack };
+class Queue {
+  constructor() {
+    this.queue = null;
+  }
+}
+
+module.exports = { Stack, Queue };
