@@ -17,6 +17,15 @@ class Stack {
       this.stack = node;
     }
   }
+
+  pop() {
+    let head = this.top;
+
+    if(!head) return 'Stack is empty';
+
+    this.top = head.next;
+    return head.value;
+  }
 }
 
 module.exports = { Stack };
