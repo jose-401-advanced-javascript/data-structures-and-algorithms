@@ -62,6 +62,11 @@ class Queue {
     this.front = head.next;
     return head.value;
   }
+
+  peek() {
+    if(!this.front) return 'Que is empty';
+    return this.queue.value;
+  }
 }
 
 module.exports = { Stack, Queue };
