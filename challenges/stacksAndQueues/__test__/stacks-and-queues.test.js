@@ -7,5 +7,10 @@ describe('Stacks', () => {
     expect(stack).toEqual({ top: null });
   });
 
+  it('can push value into a stack', () => {
+    stack.push('test');
+    expect(stack.top.value).toBe('test');
+  });
 
+  
 });
