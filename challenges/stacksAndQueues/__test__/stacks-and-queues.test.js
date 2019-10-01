@@ -27,4 +27,18 @@ describe('Stacks', () => {
     stack.pop();
     expect(stack.top.value).toBe('test');
   });
+
+  it('pop can empty a value', () => {
+    const stack2 = new Stack;
+    stack2.push('test');
+    stack2.push('test-2');
+    stack2.push('test-3');
+    const result1 = stack2.pop();
+    const result2 = stack2.pop();
+    const result3 = stack2.pop();
+    expect(result1).toBe('test-3');
+    expect(result2).toBe('test-2');
+    expect(result3).toBe('test');
+    expect(stack2.top).toBe(null);
+  });
 });
