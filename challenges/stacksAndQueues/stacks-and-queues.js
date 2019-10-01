@@ -54,6 +54,14 @@ class Queue {
     }
   }
 
+  dequeue() {
+    let head = this.front;
+
+    if(!head) return 'Que is empty';
+
+    this.front = head.next;
+    return head.value;
+  }
 }
 
 module.exports = { Stack, Queue };
