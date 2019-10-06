@@ -33,5 +33,12 @@ class Stack {
   }
 }
 
+class PseudoQueue {
+  constructor() {
+    this.inStack = new Stack();
+    this.outStack = new Stack();
+  }
+}
 
-module.exports = { Stack };
+
+module.exports = { Stack, PseudoQueue };
