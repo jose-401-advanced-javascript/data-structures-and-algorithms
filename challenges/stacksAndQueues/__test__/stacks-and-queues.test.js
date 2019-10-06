@@ -1,4 +1,4 @@
-const { Stack, Queue } = require('../stacks-and-queues');
+const { Stack } = require('../stacks-and-queues');
 
 describe('Stacks', () => {
   const stack = new Stack();
@@ -40,5 +40,14 @@ describe('Stacks', () => {
     expect(result2).toBe('test-2');
     expect(result3).toBe('test');
     expect(stack2.top).toBe(null);
+  });
+
+  it('can peek into the next item in the stack', () => {
+    stack.push('test');
+    const stack2 = new Stack;
+    const value = stack.peek();
+    const value2 = stack2.peek();
+    expect(value).toBe('test');
+    expect(value2).toBe('Stack is empty');
   });
 });
