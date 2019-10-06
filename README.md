@@ -13,3 +13,5 @@
 [Challenge 08](./challenges/llMerge/README.md)
 
 [Challenge 10](./challenges/stacksAndQueues/README.md)
+
+[Challenge 11](./challenges/queueWithStacks/README.md)
