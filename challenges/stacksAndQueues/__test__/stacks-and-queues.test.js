@@ -29,7 +29,7 @@ describe('Stacks', () => {
   });
 
   it('pop can empty a value', () => {
-    const stack2 = new Stack;
+    const stack2 = new Stack();
     stack2.push('test');
     stack2.push('test-2');
     stack2.push('test-3');
@@ -53,9 +53,19 @@ describe('Stacks', () => {
 });
 
 describe('Queue class', () => {
-  const queue = new Queue;
+  const queue = new Queue();
 
   it('creates an empty Queue', () => {
     expect(queue).toEqual({ front: null });
+  });
+
+  it('can enqueue', () => {
+    queue.enqueue('test');
+    expect(queue.front.value).toBe('test');
+  });
+  it('can enqueue multiple times', () => {
+    queue.enqueue('test-2');
+    expect(queue.front.value).toBe('test');
+    expect(queue.front.next.value).toBe('test-2');
   });
 });
