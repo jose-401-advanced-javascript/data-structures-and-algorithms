@@ -82,8 +82,6 @@ describe('Queue class', () => {
   });
 
   it('can peek into queue', () => {
-    console.log(queue);
-    
     const peek1 = queue.peek();
     queue.enqueue('test');
     const peek2 = queue.peek();
