@@ -1,11 +1,11 @@
 # Stacks and Queues
-<!-- Short summary or background information -->
+Implement and Stack and Queue data structure by creating a Node, Stack and Queue class.
 
 ## Challenge
-<!-- Description of the challenge -->
+I have to create a Stack class with a pop, push, and peek method that follows FILO order and test it. I also have to create a Queue class that has a FIFO order and has an enqueue, dequeue, and peek methods. 
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+I'll follow pretty  closely the methods I used for linked list but will have to change how new nodes are added in order to for them to have the right order.
 
 ## API
-<!-- Description of each method publicly available to your Stack and Queue-->
+![whiteboard](assets/whiteboard-10.jpg)
