@@ -17,4 +17,16 @@ describe('PseudoQueue', () => {
     expect(pQueue.inStack.top.value).toBe('test');
     expect(pQueue.inStack.top.next.value).toBe('test-2');
   });
+
+  it('can dequeue correctly', () => {
+    const removed = pQueue.dequeue();
+    expect(removed).toBe('test-2');
+    expect(pQueue.inStack.top.value).toBe('test');
+  });
+
+  it('dequeue can empty the pseudo-queue', () => {
+    const removed = pQueue.dequeue();
+    expect(removed).toBe('test');
+    expect(pQueue).toEqual({ inStack: { top: null }, outStack: { top: null } }); 
+  });
 });
