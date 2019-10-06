@@ -68,4 +68,16 @@ describe('Queue class', () => {
     expect(queue.front.value).toBe('test');
     expect(queue.front.next.value).toBe('test-2');
   });
+
+  it('can dequeue correctly', () => {
+    const removed = queue.dequeue();
+    expect(removed).toBe('test');
+    expect(queue.front.value).toBe('test-2');
+  });
+
+  it('dequeue and empty the queue ', () => {
+    const removed = queue.dequeue();
+    expect(removed).toBe('test-2');
+    expect(queue).toEqual({ front: null });
+  });
 });
