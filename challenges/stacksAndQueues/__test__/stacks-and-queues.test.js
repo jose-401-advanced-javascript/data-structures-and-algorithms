@@ -1,4 +1,4 @@
-const { Stack } = require('../stacks-and-queues');
+const { Stack, Queue } = require('../stacks-and-queues');
 
 describe('Stacks', () => {
   const stack = new Stack();
@@ -49,5 +49,13 @@ describe('Stacks', () => {
     const value2 = stack2.peek();
     expect(value).toBe('test');
     expect(value2).toBe('Stack is empty');
+  });
+});
+
+describe('Queue class', () => {
+  const queue = new Queue;
+
+  it('creates an empty Queue', () => {
+    expect(queue).toEqual({ front: null });
   });
 });
