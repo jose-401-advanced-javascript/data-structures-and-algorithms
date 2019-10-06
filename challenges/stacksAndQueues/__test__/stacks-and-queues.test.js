@@ -80,4 +80,14 @@ describe('Queue class', () => {
     expect(removed).toBe('test-2');
     expect(queue).toEqual({ front: null });
   });
+
+  it('can peek into queue', () => {
+    console.log(queue);
+    
+    const peek1 = queue.peek();
+    queue.enqueue('test');
+    const peek2 = queue.peek();
+    expect(peek1).toBe('Que is empty');
+    expect(peek2).toBe('test');
+  });
 });
