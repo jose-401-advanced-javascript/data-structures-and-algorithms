@@ -1,4 +1,4 @@
-const { Node } = require('./node');
+const { Node } = require('./node-class');
 
 class Stack {
   constructor() {
@@ -28,8 +28,7 @@ class Stack {
   }
 
   peek() {
-    if(!this.top) return 'Stack is empty';
-    return this.top.value;
+    return (this.top ? this.top.value : null);
   }
 }
 
@@ -43,7 +42,9 @@ class PseudoQueue {
     while(this.inStack.peek()) {
       this.outStack.push(this.inStack.pop());
     }
+
     this.inStack.push(value);
+
     while(this.outStack.peek()) {
       this.inStack.push(this.outStack.pop());
     }
@@ -53,6 +54,7 @@ class PseudoQueue {
     while(this.inStack.top.next) {
       this.outStack.push(this.inStack.pop());
     }
+
     const dequeuedVal = this.inStack.pop();
 
     while(this.outStack.peek()) {
