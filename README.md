@@ -11,3 +11,5 @@
 [Challenge 05 - 07](./challenges/linkedList/README.md)
 
 [Challenge 08](./challenges/llMerge/README.md)
+
+[Challenge 10](./challenges/stacksAndQueues/README.md)
