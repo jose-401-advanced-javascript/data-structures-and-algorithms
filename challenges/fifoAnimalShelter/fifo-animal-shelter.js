@@ -17,14 +17,15 @@ class AnimalShelter {
   }
 
   dequeue(pref) {
+    
     if(pref === 'dog') {
-      if(!this.dogQueue.peek()) 'there are no more dogs';
-      if(this.dogQueue.peek()) this.dogQueue.dequeue();
+      if(!this.dogQueue.peek()) return 'there are no more dogs';
+      if(this.dogQueue.peek()) return this.dogQueue.dequeue();
     }
 
     if(pref === 'cat') {
-      if(!this.catQueue.peek()) 'there are no more cats';
-      if(this.catQueue.peek()) this.catQueue.dequeue();
+      if(!this.catQueue.peek()) return 'there are no more cats';
+      if(this.catQueue.peek()) return this.catQueue.dequeue();
     }
   }
 }
