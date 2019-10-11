@@ -15,3 +15,5 @@
 [Challenge 10](./challenges/stacksAndQueues/README.md)
 
 [Challenge 11](./challenges/queueWithStacks/README.md)
+
+[Challenge 12](./challenges/fifoAnimalShelter/README.md)
