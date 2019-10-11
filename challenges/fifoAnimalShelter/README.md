@@ -1,10 +1,11 @@
 # First-in, First out Animal Shelter
-<!-- Implement a Queue class that can enqueue and dequeue on a FIFO order using two stacks.  -->
+Implement an queue that takes into account two different types of animals
 
 ## Challenge
-<!-- Since stacks are FILO I have to figure out a way to use the methods we already wrote to flip the order the values are saved so when you dequeue the first value out is the first received.  -->
+I will need to make sure that I can enqueue cats and dogs but make sure that dequeueing takes into account if I'm looking for a dog or a cat
 
 ## Approach & Efficiency
-<!-- Since we have two stacks I can use one of the stacks to receive all of the value we need to work with then pop them and push then into the second stack that way I've effectively reverse the order. I can use peek to iterate through the stack as long as I test for the stack being empty. -->
+Since I already have a queue class I will be using it to create a queue class for both cats and dogs. I'll use if statements to both put them in the right queue and to dequeue the right ones in the order they are asked for
 
-## API
+## Solution
+![whiteboard](assets/whiteboard-12.jpg)
