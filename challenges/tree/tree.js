@@ -1,4 +1,3 @@
-import { isModuleDeclaration } from "@babel/types";
 
 class Node {
   constructor(value) {
@@ -54,7 +53,7 @@ class BinaryTree {
   }
 
   postOrder(node) {
-    
+
     if(node === null) return [];
     let stack = [];
     let result = [];
@@ -76,6 +75,46 @@ class BinaryTree {
   }
 }
 
+class BinarySearchTree {
+  constructor() {
+    this.root = null;
+  }
+
+  add(value) {
+    let node = this.root;
+    return recurse(value, node);
+  }
+
+  contains(value) {
+    let node = this.root;
+    return recurseFind(value, node);
+  }
+}
+
+const recurse = (value, node) => {
+  let dir;
+  value > node.value ? dir = 'right' : dir = 'left';
+
+  if(node[dir]) {
+    return recurse(value, node[dir]);
+  }
+  return node[dir] = new Node(value);
+};
+
+const recurseFind = (value, node) => {
+  let dir;
+
+  if(value === node.value) return true;
+
+  value > node.value ? dir = 'right' : dir = 'left';
+
+  if(node[dir]) return recurseFind(value, node[dir]);
+  
+  else return false;
+
+};
+
 module.exports = {
-  BinaryTree
+  BinaryTree,
+  BinarySearchTree
 };
