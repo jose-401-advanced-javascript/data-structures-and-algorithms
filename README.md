@@ -17,3 +17,7 @@
 [Challenge 11](./challenges/queueWithStacks/README.md)
 
 [Challenge 12](./challenges/fifoAnimalShelter/README.md)
+
+[Challenge 13](./challenges/multiBracketValidation/README.md)
+
+[Challenge 14](./challenges/tree/README.md)
