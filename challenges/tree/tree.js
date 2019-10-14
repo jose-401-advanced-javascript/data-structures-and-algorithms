@@ -36,7 +36,7 @@ class BinaryTree {
     let result = [];
     let pointerNode = node;
 
-    while(stack.length !== null) {
+    while(stack.length !== 0 || pointerNode !== null) {
 
       if(pointerNode !== null) {
         stack.push(pointerNode);
@@ -109,12 +109,13 @@ const recurseFind = (value, node) => {
   value > node.value ? dir = 'right' : dir = 'left';
 
   if(node[dir]) return recurseFind(value, node[dir]);
-  
+
   else return false;
 
 };
 
 module.exports = {
+  Node,
   BinaryTree,
   BinarySearchTree
 };
