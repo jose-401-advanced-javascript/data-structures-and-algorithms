@@ -5,6 +5,6 @@ describe('insertion sort', () => {
 
   it('shifts an array', () => {
     const sortedArr = insertionSort(arr1);
-    console.log(sortedArr);
+    expect(sortedArr).toEqual([1, 2, 3, 5, 7]);
   });
 });
