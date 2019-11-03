@@ -15,6 +15,7 @@ const insertionSort = (arr) => {
     //arr[j + 1] <-- temp
     arr[j + 1] = temp;
   }
+  return arr;
 };
 
 module.exports = { insertionSort };
