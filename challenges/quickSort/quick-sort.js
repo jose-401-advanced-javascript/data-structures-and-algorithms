@@ -41,7 +41,7 @@ const quickSort = (arr, left, right) => {
     arr[i] = arr[low];
     //arr[low] <-- temp
     arr[low] = temp;
-  }
+  };
 };
 
 module.exports = { quickSort };
