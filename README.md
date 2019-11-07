@@ -25,3 +25,5 @@
 [Challenge 26](./challenges/insertionSort/README.md)
 
 [Challenge 27](./challenges/mergeSort/README.md)
+
+[Challenge 28](./challenges/quickSort/README.md)
