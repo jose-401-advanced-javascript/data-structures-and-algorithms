@@ -10,38 +10,40 @@ const quickSort = (arr, left, right) => {
     quickSort(arr, position + 1, right);
   }
 
+};  
+
   //ALGORITHM Partition(arr, left, right)
-  const partition = (arr, left, right) => {
+const partition = (arr, left, right) => {
     //DEFINE pivot <-- arr[right]
-    let pivot = arr[right];
+  let pivot = arr[right];
     //DEFINE low <-- left - 1
-    let low = left - 1;
+  let low = left - 1;
     //for i <- left to right do
-    for(let i = left; i < right; i++) {
+  for(let i = left; i < right; i++) {
       //if arr[i] <= pivot
-      if(arr[i] <= pivot) {
+    if(arr[i] <= pivot) {
         //low++
-        low++;
+      low++;
         //Swap(arr, i, low)
-        swap(arr, i, low);
-      }
+      swap(arr, i, low);
     }
+  }
     //Swap(arr, right, low + 1)
-    swap(arr, right, low + 1);
+  swap(arr, right, low + 1);
     //return low + 1
-    return low + 1;
-  };
-  //ALGORITHM Swap(arr, i, low)
-  const swap = (arr, i, low) => {
-    // DEFINE temp;
-    let temp;
-    //temp <-- arr[i]
-    temp = arr[i];
-    //arr[i] <-- arr[low]
-    arr[i] = arr[low];
-    //arr[low] <-- temp
-    arr[low] = temp;
-  };
+  return low + 1;
 };
+  //ALGORITHM Swap(arr, i, low)
+const swap = (arr, i, low) => {
+    // DEFINE temp;
+  let temp;
+    //temp <-- arr[i]
+  temp = arr[i];
+    //arr[i] <-- arr[low]
+  arr[i] = arr[low];
+    //arr[low] <-- temp
+  arr[low] = temp;
+};
+
 
 module.exports = { quickSort };
