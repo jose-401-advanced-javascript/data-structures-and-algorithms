@@ -19,6 +19,16 @@ class Hashtable {
 
     return index;
   }
+
+  get(key) {
+    let index = this.hashAlgorithm(key);
+
+    if(!this.buckets[index]) return null;
+    
+    for(let i = 0; i < this.buckets.length; i++) {
+      if(this.buckets[i][0] === key) return this.buckets[i][1];
+    }
+  }
 }
 
 module.exports = { Hashtable };
