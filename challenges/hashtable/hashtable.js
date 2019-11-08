@@ -7,6 +7,18 @@ class Hashtable {
     this.buckets = new Array(size).fill([]);
     this.hashAlgorithm = hashAlgorithm(size);
   }
+
+  add(key, value) {
+    let index = this.hashAlgorithm(key);
+
+    if(!this.buckets[index]) {
+      this.buckets[index] = [];
+    }
+
+    this.buckets[index].push([key, value]);
+
+    return index;
+  }
 }
 
 module.exports = { Hashtable };
