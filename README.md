@@ -21,3 +21,5 @@
 [Challenge 13](./challenges/multiBracketValidation/README.md)
 
 [Challenge 14](./challenges/tree/README.md)
+
+[Challenge 26](./challenges/insertionSort/README.md)
