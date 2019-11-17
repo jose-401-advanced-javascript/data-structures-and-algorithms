@@ -30,4 +30,6 @@
 
 [Challenge 30](./challenges/hashtable/README.md)
 
-[Challenge 31](./challenges/treeIntersection/README.md)
+[Challenge 31](./challenges/repeatedWord/README.md)
+
+[Challenge 32](./challenges/treeIntersection/README.md)
