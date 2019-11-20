@@ -33,3 +33,5 @@
 [Challenge 31](./challenges/repeatedWord/README.md)
 
 [Challenge 32](./challenges/treeIntersection/README.md)
+
+[Challenge 33](./challenges/leftJoin/README.md)
