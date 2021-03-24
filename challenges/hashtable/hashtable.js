@@ -11,23 +11,19 @@ class Hashtable {
   add(key, value) {
     let index = this.hash(key);
 
-    if(!this.buckets[index]) {
-      this.buckets[index] = [];
-    }
-
-    this.buckets[index].push([key, value]);
+    if(!this.buckets[index]) this.buckets[index].push([key, value]);
+    else this.buckets[index] = ([key, value]);
 
     return index;
   }
 
   get(key) {
     let index = this.hash(key);
-    console.log(index);
     
     if(!this.buckets[index]) return null;
     
     for(let i = 0; i < this.buckets.length; i++) {
-      if(this.buckets[i][0][0] === key) return this.buckets[i][0][1];
+      if(this.buckets[i][0] === key) return this.buckets[i][1];
     }
   }
 
